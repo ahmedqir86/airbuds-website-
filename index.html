@@ -1,13 +1,145 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AirBuds Store | Premium Wireless Earbuds</title>
+
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h2>Hello world</h2>
-    
-    <h2>hello</h2>
-</body>
-</html>
+
+<header>
+  <div class="logo">AIRBUDS.</div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+    <a href="#cart">Cart 🛒 <span id="cartCount">0</span></a>
+  </nav>
+</header>
+
+<div class="hero" id="home">
+  <div class="hero-content">
+    <h1>Experience Sound Without Limits.</h1>
+
+    <p>
+      Discover premium wireless earbuds.
+      Crystal clear sound, powerful bass
+      and ultimate comfort.
+    </p>
+
+    <a href="#products" class="btn">Shop Now</a>
+  </div>
+</div>
+
+<section id="products">
+
+<h2 class="title">Our Products</h2>
+
+<input
+  type="text"
+  class="search"
+  id="search"
+  placeholder="Search Air Buds..."
+>
+
+<div class="products" id="productList"></div>
+
+</section>
+
+<section class="cart-section" id="cart">
+
+<h2>Your Shopping Cart 🛒</h2>
+
+<div class="cart-items" id="cartItems">
+  Your cart is empty.
+</div>
+
+<div class="total">
+  Total: Rs. <span id="total">0</span>
+</div>
+
+<button class="btn" onclick="checkout()">
+  Order on WhatsApp
+</button>
+
+</section>
+
+<!-- CONTACT SECTION -->
+
+<section class="contact-section" id="contact">
+
+<h2 class="title">Contact Us</h2>
+
+<p class="contact-description">
+  Have any questions? Feel free to contact us.
+  We would love to hear from you!
+</p>
+
+<form id="contactForm" class="contact-form" novalidate>
+
+  <div class="form-group">
+    <label for="name">Your Name</label>
+    <input
+      type="text"
+      id="name"
+      placeholder="Enter your name"
+      required
+      minlength="3"
+    >
+    <small class="error" id="nameError"></small>
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email Address</label>
+    <input
+      type="email"
+      id="email"
+      placeholder="Enter your email"
+      required
+    >
+    <small class="error" id="emailError"></small>
+  </div>
+
+  <div class="form-group">
+    <label for="phone">Phone Number</label>
+    <input
+      type="tel"
+      id="phone"
+      placeholder="03XXXXXXXXX"
+      required
+    >
+    <small class="error" id="phoneError"></small>
+  </div>
+
+  <div class="form-group">
+    <label for="message">Your Message</label>
+    <textarea
+      id="message"
+      rows="5"
+      placeholder="Write your message..."
+      required
+      minlength="10"
+    ></textarea>
+    <small class="error" id="messageError"></small>
+  </div>
+
+  <button type="submit" class="btn contact-btn">
+    Send Message
+  </button>
+
+  <p id="successMessage"></p>
+
+</form>
+
+</section>
+
+<footer>
+  <p>© 2026 AIRBUDS STORE. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>

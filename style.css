@@ -1,0 +1,213 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+body { 
+  background: #0A0E17; /* Deep Dark Background */
+  color: #E2E8F0; /* Light Gray Text */
+}
+header { 
+  background: #1A1F2E; /* Darker Navy Header */
+  color: #E2E8F0; 
+  padding: 22px 7%; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+}
+.logo { 
+  font-size: 28px; 
+  font-weight: bold; 
+  color: #8B5CF6; /* Purple Logo */
+}
+nav a { 
+  color: #E2E8F0; 
+  text-decoration: none; 
+  margin-left: 25px; 
+}
+nav a:hover { 
+  color: #8B5CF6; /* Purple Hover */
+}
+.hero { 
+  min-height: 550px; 
+  background: linear-gradient(90deg,#1A1F2Ecc,#1A1F2Eaa), 
+    url("https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?w=1600") center/cover; 
+  color: #E2E8F0; 
+  display: flex; 
+  align-items: center; 
+  padding: 8%; 
+}
+.hero-content { 
+  max-width: 550px; 
+}
+.hero h1 { 
+  font-size: 60px; 
+  margin-bottom: 20px; 
+  transition: 0.3s ease;
+}
+.hero h1:hover { 
+  color: #8B5CF6; 
+  transform: translateY(-5px); 
+}
+.hero p { 
+  font-size: 19px; 
+  margin-bottom: 30px; 
+  color: #E2E8F0; 
+  line-height: 1.6; 
+  transition: 0.3s ease;
+}
+.hero p:hover { 
+  color: #FFFFFF; 
+  transform: scale(1.02); 
+}
+.btn { 
+  background: #8B5CF6; /* Purple Button */
+  color: #E2E8F0; 
+  padding: 14px 28px; 
+  border: none; 
+  border-radius: 30px; 
+  font-weight: bold; 
+  cursor: pointer; 
+  text-decoration: none; 
+}
+.btn:hover { 
+  background: #3B82F6; /* Blue on Hover */
+}
+section { 
+  padding: 70px 7%; 
+}
+.title { 
+  text-align: center; 
+  font-size: 38px; 
+  margin-bottom: 40px; 
+}
+.search { 
+  display: block; 
+  margin: 0 auto 35px; 
+  max-width: 400px; 
+  width: 100%; 
+  padding: 15px; 
+  background: #1A1F2E; /* Darker Navy Input */
+  color: #E2E8F0; 
+  border: 1px solid #8B5CF6; /* Purple Border */
+  border-radius: 30px; 
+  font-size: 16px; 
+}
+.products { 
+  display: grid; 
+  grid-template-columns: repeat(3,1fr); 
+  gap: 25px; 
+}
+.product { 
+  background: #1A1F2E; /* Darker Navy Card */
+  padding: 20px; 
+  border-radius: 15px; 
+  text-align: center; 
+  box-shadow: 0 5px 20px #00000033; 
+  transition: 0.3s; 
+}
+.product:hover { 
+  transform: translateY(-7px); 
+}
+.product img { 
+  width: 100%; 
+  height: 230px; 
+  object-fit: contain; 
+  margin-bottom: 15px; 
+}
+.product h3 { 
+  margin-bottom: 10px; 
+}
+.product p { 
+  color: #E2E8F0; 
+  margin-bottom: 15px; 
+}
+.price { 
+  font-size: 23px; 
+  font-weight: bold; 
+  color: #8B5CF6; /* Purple Price */
+  margin-bottom: 20px; 
+}
+.cart-section { 
+  background: #1A1F2E; /* Darker Navy */
+  color: #E2E8F0; 
+  text-align: center; 
+}
+.cart-section h2 { 
+  margin-bottom: 20px; 
+}
+.cart-items { 
+  max-width: 600px; 
+  margin: auto; 
+  text-align: left; 
+}
+.cart-item { 
+  display: flex; 
+  justify-content: space-between; 
+  gap: 15px; 
+  padding: 15px; 
+  border-bottom: 1px solid #8B5CF6; /* Purple Border */
+}
+.remove { 
+  background: #EF4444; /* Red Remove */
+  color: #E2E8F0; 
+  padding: 7px 12px; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+}
+.total { 
+  margin: 25px; 
+  font-size: 25px; 
+}
+.contact-section { 
+  background: #0A0E17; /* Deep Dark */
+  text-align: center; 
+}
+.contact-form { 
+  max-width: 600px; 
+  margin: auto; 
+  background: #1A1F2E; /* Darker Navy Form */
+  padding: 35px; 
+  border-radius: 15px; 
+  box-shadow: 0 5px 20px #00000033; 
+  text-align: left; 
+}
+.form-group { 
+  margin-bottom: 22px; 
+}
+.form-group label { 
+  display: block; 
+  font-weight: bold; 
+  margin-bottom: 9px; 
+  color: #E2E8F0;
+}
+.form-group input, .form-group textarea { 
+  width: 100%; 
+  padding: 14px; 
+  background: #1A1F2E; 
+  color: #E2E8F0; 
+  border: 1px solid #8B5CF6; 
+  border-radius: 8px; 
+  font-size: 16px; 
+  outline: none; 
+  resize: vertical; 
+}
+.form-group input:focus, .form-group textarea:focus { 
+  border-color: #3B82F6; 
+}
+.contact-btn { 
+  width: 100%; 
+  background: #8B5CF6; 
+  color: #E2E8F0; 
+  padding: 14px; 
+  border: none; 
+  border-radius: 8px; 
+  font-weight: bold; 
+  cursor: pointer; 
+}
+.contact-btn:hover { 
+  background: #3B82F6; 
+}
+footer { 
+  background: #1A1F2E; /* Darker Navy Footer */
+  color: #E2E8F0; 
+  text-align: center; 
+  padding: 30px; 
+}
