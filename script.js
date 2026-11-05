@@ -3,13 +3,13 @@ const products = [
   {
     id: 1,
     name: "AirBuds Pro",
-    price: 5500,
+    price: 2500,
     image: "https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?w=600"
   },
   {
     id: 2,
     name: "AirBuds Max",
-    price: 7500,
+    price: 3500,
     image: "https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?w=600"
   },
   {
@@ -27,13 +27,13 @@ const products = [
   {
     id: 5,
     name: "AirBuds Premium",
-    price: 8500,
+    price: 1300,
     image: "https://images.unsplash.com/photo-1608156639585-b3a032ef9689?w=600"
   },
   {
     id: 6,
     name: "AirBuds Mini",
-    price: 2500,
+    price: 1000,
     image: "https://images.unsplash.com/photo-1598331668826-20cecc596b86?w=600"
   }
 ];
@@ -48,7 +48,7 @@ function displayProducts(items) {
     <div class="product">
       <img src="${product.image}" alt="${product.name}">
       <h3>${product.name}</h3>
-      <p>Premium Wireless Sound</p>
+      <p>Premium Wirlees Sound</p>
       <div class="price">Rs. ${product.price.toLocaleString("en-PK")}</div>
       <button class="btn" onclick="addToCart(${product.id})">
         Add to Cart
@@ -237,3 +237,24 @@ if (!emailPattern.test(email.value.trim())) {
 });
 
 displayProducts(products);
+
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.getElementById('navMenu');
+
+hamburger.addEventListener('click', function(){
+  navMenu.classList.toggle('active');
+  // Icon badal do
+  if(navMenu.classList.contains('active')){
+    hamburger.textContent = '✕';
+  } else {
+    hamburger.textContent = '☰';
+  }
+});
+
+// Kisi link pe click karo to menu khud band ho jaye
+document.querySelectorAll('#navMenu a').forEach(link => {
+  link.addEventListener('click', () => {
+    navMenu.classList.remove('active');
+    hamburger.textContent = '☰';
+  });
+});
